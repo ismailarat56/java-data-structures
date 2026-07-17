@@ -113,10 +113,8 @@ public class MinHeap {
 
         // Dizi dolduğunda kapasite iki katına çıkarılır.
         int[] newHeap = new int[heap.length * 2];
-
-        for (int index = 0; index < heap.length; index++) {
-            newHeap[index] = heap[index];
-        }
+//bozuldu bura
+        System.arraycopy(heap, 0, newHeap, 0, heap.length);
 
         heap = newHeap;
     }
