@@ -14,6 +14,6 @@ Başlangıç toplamı `22` olur. `update(2, 6)` işleminden sonra toplam `23` ol
 
 ```bash
 cd src
-javac SegmentTree.java Main.java
-java Main
+javac SegmentTree.java SegmentTreeDemo.java
+java SegmentTreeDemo
 ```

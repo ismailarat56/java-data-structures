@@ -13,5 +13,5 @@ This project builds a small queue in Java without using the built-in queue or li
 
 ```bash
 javac -d out src/*.java
-java -cp out Main
+java -cp out QueueDemo
 ```

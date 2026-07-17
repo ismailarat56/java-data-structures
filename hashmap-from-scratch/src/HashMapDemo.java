@@ -1,4 +1,4 @@
-public class Main {
+public class HashMapDemo {
     public static void main(String[] args) {
         MyHashMap students = new MyHashMap(10);
 

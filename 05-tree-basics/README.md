@@ -13,5 +13,5 @@ This project builds a small binary tree in Java. It creates nodes from `A` to `F
 
 ```bash
 javac -d out src/*.java
-java -cp out Main
+java -cp out TreeDemo
 ```

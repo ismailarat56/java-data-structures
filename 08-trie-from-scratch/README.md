@@ -17,6 +17,6 @@ Bu Trie yalnızca `a-z` arası küçük İngilizce harfleri destekler. Her node,
 
 ```bash
 cd src
-javac TrieNode.java MyTrie.java Main.java
-java Main
+javac TrieNode.java MyTrie.java TrieDemo.java
+java TrieDemo
 ```

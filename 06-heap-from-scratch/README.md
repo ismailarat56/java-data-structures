@@ -20,6 +20,6 @@ Eklenen değerler: `40, 10, 30, 50, 20, 5, 35`
 
 ```bash
 cd src
-javac MinHeap.java Main.java
-java Main
+javac MinHeap.java MinHeapDemo.java
+java MinHeapDemo
 ```

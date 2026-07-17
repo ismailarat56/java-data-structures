@@ -16,6 +16,6 @@ Başlangıçta `rangeSum(0, 5) = 22` olur. `set(2, 6)` işleminden sonra `rangeS
 
 ```bash
 cd src
-javac FenwickTree.java Main.java
-java Main
+javac FenwickTree.java FenwickTreeDemo.java
+java FenwickTreeDemo
 ```

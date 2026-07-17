@@ -1,4 +1,4 @@
-public class Main {
+public class StackDemo {
     public static void main(String[] args) {
         MyStack actionHistory = new MyStack(5);
 

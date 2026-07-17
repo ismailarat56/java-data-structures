@@ -1,5 +1,5 @@
 // Fenwick ağacı, önek toplamlarını ve tekil güncellemeleri logaritmik sürede yapar.
-public class FenwickTree {
+public final class FenwickTree {
     private final long[] tree;
     private final int[] values;
     private final int length;

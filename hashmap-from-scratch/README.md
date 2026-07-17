@@ -13,5 +13,5 @@ This project builds a small hash map in Java without using the built-in map clas
 
 ```bash
 javac -d out src/*.java
-java -cp out Main
+java -cp out HashMapDemo
 ```

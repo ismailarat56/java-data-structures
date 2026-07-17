@@ -13,5 +13,5 @@ This project builds a small stack in Java without using the built-in stack or li
 
 ```bash
 javac -d out src/*.java
-java -cp out Main
+java -cp out StackDemo
 ```

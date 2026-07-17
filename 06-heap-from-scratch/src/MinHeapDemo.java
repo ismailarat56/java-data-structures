@@ -1,4 +1,4 @@
-public class Main {
+public class MinHeapDemo {
     public static void main(String[] args) {
         // Küçük başlangıç kapasitesi, dinamik büyütme davranışını da test eder.
         MinHeap emergencyHeap = new MinHeap(3);

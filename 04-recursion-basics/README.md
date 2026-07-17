@@ -14,5 +14,5 @@ This project shows simple recursion examples in Java. It compares recursive and 
 
 ```bash
 javac -d out src/*.java
-java -cp out Main
+java -cp out RecursionDemo
 ```

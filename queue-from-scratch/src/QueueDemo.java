@@ -1,4 +1,4 @@
-public class Main {
+public class QueueDemo {
     public static void main(String[] args) {
         MyQueue callQueue = new MyQueue(5);
 

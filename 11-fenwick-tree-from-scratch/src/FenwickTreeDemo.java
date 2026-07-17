@@ -1,4 +1,4 @@
-public class Main {
+public class FenwickTreeDemo {
     public static void main(String[] args) {
         int[] sales = {2, 1, 5, 3, 4, 7};
         FenwickTree fenwickTree = new FenwickTree(sales);

@@ -1,4 +1,4 @@
-public class Main {
+public class TreeDemo {
     public static void main(String[] args) {
         // Node'ları oluşturuyoruz.
         TreeNode nodeA = new TreeNode("A");

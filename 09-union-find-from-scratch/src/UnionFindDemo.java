@@ -1,4 +1,4 @@
-public class Main {
+public class UnionFindDemo {
     public static void main(String[] args) {
         UnionFind network = new UnionFind(8);
 

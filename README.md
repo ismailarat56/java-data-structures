@@ -55,7 +55,7 @@ Her klasör bağımsız bir Java projesidir ve kendi `Main` sınıfına sahiptir
 ```bash
 cd 06-heap-from-scratch
 javac -d out src/*.java
-java -cp out Main
+java -cp out MinHeapDemo
 ```
 
 Başka bir örneği çalıştırmak için ilk komuttaki klasör adını değiştirmeniz yeterlidir:
@@ -63,7 +63,7 @@ Başka bir örneği çalıştırmak için ilk komuttaki klasör adını değişt
 ```bash
 cd 08-trie-from-scratch
 javac -d out src/*.java
-java -cp out Main
+java -cp out TrieDemo
 ```
 
 Derlenen `.class` dosyaları ilgili projenin `out` klasörüne yazılır. Temizlemek istediğinizde bu klasörü silebilirsiniz.
@@ -97,4 +97,4 @@ Konular birbirinin üzerine kurulacak şekilde numaralandırılmıştır. İlk k
 
 ## Test durumu
 
-Depoda ayrı bir otomatik test altyapısı bulunmuyor. Her projenin `Main.java` dosyası, temel işlemleri örnek verilerle çalıştıran bir demo görevi görüyor. Değişiklik yaptıktan sonra ilgili projeyi yeniden derleyip konsol çıktısını proje README'sindeki beklenen sonuçlarla karşılaştırabilirsiniz.
+Depoda ayrı bir otomatik test altyapısı bulunmuyor. Her projenin `*Demo.java` dosyası, temel işlemleri örnek verilerle çalıştıran bir demo görevi görüyor. Değişiklik yaptıktan sonra ilgili projeyi yeniden derleyip konsol çıktısını proje README'sindeki beklenen sonuçlarla karşılaştırabilirsiniz.

@@ -19,6 +19,6 @@ Beklenen component sayısı: `2`
 
 ```bash
 cd src
-javac UnionFind.java Main.java
-java Main
+javac UnionFind.java UnionFindDemo.java
+java UnionFindDemo
 ```

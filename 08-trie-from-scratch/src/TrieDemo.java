@@ -1,4 +1,4 @@
-public class Main {
+public class TrieDemo {
     public static void main(String[] args) {
         MyTrie dictionary = new MyTrie();
         String[] words = {"car", "card", "care", "cat", "dog", "door"};

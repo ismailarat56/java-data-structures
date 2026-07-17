@@ -1,4 +1,4 @@
-public class Main {
+public class SegmentTreeDemo {
     public static void main(String[] args) {
         int[] sales = {2, 1, 5, 3, 4, 7};
         SegmentTree segmentTree = new SegmentTree(sales);

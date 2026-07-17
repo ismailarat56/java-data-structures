@@ -1,4 +1,4 @@
-public class Main {
+public class RecursionDemo {
     public static void main(String[] args) {
         RecursionExamples examples = new RecursionExamples();
 

@@ -1,4 +1,4 @@
-public class Main {
+public class GraphDemo {
     public static void main(String[] args) {
         // İlk grafik; dolaşma, derece ve yol sorgularını göstermek için bağlantılıdır.
         MatrixGraph cityGraph = new MatrixGraph(6);

@@ -20,6 +20,6 @@ A'dan başlayan beklenen sıralar:
 
 ```bash
 cd src
-javac MatrixGraph.java IntQueue.java Main.java
-java Main
+javac MatrixGraph.java IntQueue.java GraphDemo.java
+java GraphDemo
 ```
