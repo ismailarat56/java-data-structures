@@ -76,10 +76,8 @@ public class Main {
     private static int[] copyArray(int[] numbers) {
         int[] copy = new int[numbers.length];
 
-        for (int i = 0; i < numbers.length; i++) {
-            copy[i] = numbers[i];
-        }
-
+        System.arraycopy(numbers, 0, copy, 0, numbers.length);
+//for fix
         return copy;
     }
 
