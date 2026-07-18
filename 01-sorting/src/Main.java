@@ -29,7 +29,6 @@ public class Main {
         long insertionTime = System.nanoTime() - insertionStart;
 
         System.out.println("SORTED RESULTS");
-        System.out.println("==============");
         System.out.println(
             "Original:       "
                 + BasicSortAlgorithms.arrayToString(originalNumbers)
@@ -58,9 +57,8 @@ public class Main {
                 + BasicSortAlgorithms.arrayToString(countingResult)
         );
 
-        System.out.println("");
+        System.out.println();
         System.out.println("METRICS");
-        System.out.println("=======");
         printMetrics("Bubble Sort", bubbleMetrics, bubbleTime);
         printMetrics("Selection Sort", selectionMetrics, selectionTime);
         printMetrics("Insertion Sort", insertionMetrics, insertionTime);
@@ -70,7 +68,7 @@ public class Main {
             && isSorted(selectionNumbers)
             && isSorted(insertionNumbers);
 
-        System.out.println("");
+        System.out.println();
         System.out.println("All basic sorts are correct: " + allSorted);
     }
 
