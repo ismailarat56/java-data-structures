@@ -70,8 +70,8 @@ public class MyTrie {
     }
 
     private boolean hasChildren(TrieNode node) {
-        for (int index = 0; index < node.children.length; index++) {
-            if (node.children[index] != null) {
+        for (TrieNode children : node.children) {
+            if (children != null) {
                 return true;
             }
         }
@@ -94,9 +94,9 @@ public class MyTrie {
         // Her kelime sonu bir kez sayılır ve alt dallardaki sonuçlara eklenir.
         int count = currentNode.isWord ? 1 : 0;
 
-        for (int index = 0; index < currentNode.children.length; index++) {
-            if (currentNode.children[index] != null) {
-                count += countWords(currentNode.children[index]);
+        for (TrieNode children : currentNode.children) {
+            if (children != null) {
+                count += countWords(children);
             }
         }
 
