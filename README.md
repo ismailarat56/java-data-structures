@@ -1,69 +1,73 @@
+**English** · [Türkçe](README.tr.md)
+
 <div align="center">
 
 # Java Data Structures From Scratch
 
-**Java ile temel veri yapılarını ve algoritmaları hazır koleksiyon sınıfları olmadan, sıfırdan uygulayan 12 bağımsız örnek proje.**
+**12 standalone sample projects that implement basic data structures and algorithms in Java from scratch, without the built-in collection classes.**
 
 ![Java](https://img.shields.io/badge/Java-8%2B-ED8B00?logo=openjdk&logoColor=white)
-![Lisans](https://img.shields.io/badge/lisans-MIT-2ea44f)
+![License](https://img.shields.io/badge/license-MIT-2ea44f)
 
-[Öne çıkanlar](#öne-çıkanlar) · [Projeler](#projeler) · [Kurulum ve çalıştırma](#kurulum-ve-çalıştırma) · [Karmaşıklık özeti](#karmaşıklık-özeti)
+[Highlights](#highlights) · [Projects](#projects) · [Setup and running](#setup-and-running) · [Complexity summary](#complexity-summary)
 
 </div>
 
-Java ile temel veri yapılarını ve algoritmaları sıfırdan uygulayan, birbirinden bağımsız örnek projelerden oluşan bir çalışma deposu. Amaç yalnızca hazır sınıfları kullanmak değil; bir veri yapısının bellekte nasıl temsil edildiğini, temel işlemlerinin nasıl çalıştığını ve farklı yaklaşımların zaman/alan maliyetlerini anlaşılır örneklerle göstermektir. Veri yapılarını öğrenenler için hazırlanmıştır; derlemek için yalnızca JDK gerekir.
+A study repository made of standalone sample projects that implement basic data structures and algorithms in Java from scratch. The goal is not only to use the built-in classes. It is to show, with clear examples, how a data structure is represented in memory, how its basic operations work, and what the time and space costs of different approaches are. It is intended for people who are learning data structures; only a JDK is needed to compile it.
 
-## Öne çıkanlar
+Note: the README files in the project folders are kept as they are; five are in English and seven are in Turkish. The console output of three demos (`stack-from-scratch`, `queue-from-scratch`, `hashmap-from-scratch`) is in Turkish; the other nine print English text.
 
-- **Hazır koleksiyon yok:** kaynak dosyalarda `import` satırı bulunmaz; yapılar dizi ve özel node/entry sınıflarıyla kurulur.
-- **Bağımsız projeler:** 12 klasörün her biri kendi `src/` klasörü ve giriş sınıfıyla tek başına derlenir.
-- **Bağımlılık yok:** Maven, Gradle ya da üçüncü taraf kütüphane gerekmez; `javac` ve `java` yeterlidir.
-- **Doğrusal yapılar:** dizi tabanlı stack, dairesel dizi tabanlı queue ve ayrı zincirleme kullanan hash map.
-- **Sıralama:** bubble, selection, insertion ve counting sort; ilk üçünde karşılaştırma sayısı, swap sayısı ve süre ölçülür.
-- **Ağaç ve heap:** binary tree üzerinde preorder, inorder ve postorder dolaşma; dolunca kapasitesini iki katına çıkaran min heap.
-- **Graph:** adjacency matrix üzerinde recursive DFS, özel `IntQueue` ile BFS, yol kontrolü ve connected component sayımı.
-- **Trie:** her node'da 26 elemanlı child dizisi; kelime ve prefix arama, silme, sayma ve alfabetik listeleme.
-- **Aralık sorguları:** segment tree ve Fenwick tree ile range sum ve güncelleme; Union-Find'da path compression ve union by rank.
-- **Demo sınıfları:** her projede örnek senaryoyu konsola yazdıran bir giriş sınıfı vardır; alt README'lerin yedisi beklenen sonucu da verir.
+## Highlights
 
-## Projeler
+- **No built-in collections:** the source files have no `import` lines; the structures are built with arrays and custom node/entry classes.
+- **Standalone projects:** each of the 12 folders compiles on its own, with its own `src/` folder and entry class.
+- **No dependencies:** no Maven, Gradle or third-party library is needed; `javac` and `java` are enough.
+- **Linear structures:** an array-based stack, a circular-array-based queue and a hash map that uses separate chaining.
+- **Sorting:** bubble, selection, insertion and counting sort; for the first three, the number of comparisons, the number of swaps and the elapsed time are measured.
+- **Tree and heap:** preorder, inorder and postorder traversal on a binary tree; a min heap that doubles its capacity when it is full.
+- **Graph:** recursive DFS on an adjacency matrix, BFS with a custom `IntQueue`, path check and connected component count.
+- **Trie:** a 26-element child array in every node; word and prefix search, deletion, counting and alphabetical listing.
+- **Range queries:** range sum and update with a segment tree and a Fenwick tree; path compression and union by rank in Union-Find.
+- **Demo classes:** every project has an entry class that prints a sample scenario to the console; seven of the sub-folder READMEs also give the expected result.
 
-| Sıra | Proje | Konu | Öne çıkan işlemler |
+## Projects
+
+| No. | Project | Topic | Main operations |
 | ---: | --- | --- | --- |
-| 1 | [`stack-from-scratch`](stack-from-scratch/) | Dizi tabanlı stack | `push`, `pop`, `peek`, LIFO |
-| 2 | [`queue-from-scratch`](queue-from-scratch/) | Dairesel dizi tabanlı queue | `enqueue`, `dequeue`, `peek`, FIFO |
-| 3 | [`hashmap-from-scratch`](hashmap-from-scratch/) | Ayrı zincirleme kullanan hash map | `put`, `get`, `remove`, çakışma yönetimi |
-| 4 | [`04-recursion-basics`](04-recursion-basics/) | Recursion temelleri | Factorial, Fibonacci, özyinelemeli ve iteratif çözümler |
-| 5 | [`05-tree-basics`](05-tree-basics/) | Binary tree temelleri | Preorder, inorder ve postorder dolaşma |
-| 6 | [`06-heap-from-scratch`](06-heap-from-scratch/) | Dizi tabanlı min heap | `insert`, `peek`, `extractMin`, dinamik kapasite |
-| 7 | [`07-graph-from-scratch`](07-graph-from-scratch/) | Adjacency matrix tabanlı graph | Edge işlemleri, DFS, BFS, yol ve component kontrolü |
-| 8 | [`08-trie-from-scratch`](08-trie-from-scratch/) | Dizi tabanlı trie | Kelime/prefix arama, silme, sayma ve sıralı listeleme |
-| 9 | [`09-union-find-from-scratch`](09-union-find-from-scratch/) | Disjoint set (Union-Find) | Path compression, union by rank, component takibi |
-| 10 | [`10-segment-tree-from-scratch`](10-segment-tree-from-scratch/) | Segment tree | Range sum ve point update |
-| 11 | [`11-fenwick-tree-from-scratch`](11-fenwick-tree-from-scratch/) | Fenwick tree (BIT) | Prefix sum, range sum, `add` ve `set` |
-| 12 | [`01-sorting`](01-sorting/) | Temel sıralama algoritmaları | Bubble, selection, insertion ve counting sort; karşılaştırma ve swap sayımı |
+| 1 | [`stack-from-scratch`](stack-from-scratch/) | Array-based stack | `push`, `pop`, `peek`, LIFO |
+| 2 | [`queue-from-scratch`](queue-from-scratch/) | Circular-array-based queue | `enqueue`, `dequeue`, `peek`, FIFO |
+| 3 | [`hashmap-from-scratch`](hashmap-from-scratch/) | Hash map that uses separate chaining | `put`, `get`, `remove`, collision handling |
+| 4 | [`04-recursion-basics`](04-recursion-basics/) | Recursion basics | Factorial, Fibonacci, recursive and iterative solutions |
+| 5 | [`05-tree-basics`](05-tree-basics/) | Binary tree basics | Preorder, inorder and postorder traversal |
+| 6 | [`06-heap-from-scratch`](06-heap-from-scratch/) | Array-based min heap | `insert`, `peek`, `extractMin`, dynamic capacity |
+| 7 | [`07-graph-from-scratch`](07-graph-from-scratch/) | Adjacency-matrix-based graph | Edge operations, DFS, BFS, path and component checks |
+| 8 | [`08-trie-from-scratch`](08-trie-from-scratch/) | Array-based trie | Word/prefix search, deletion, counting and sorted listing |
+| 9 | [`09-union-find-from-scratch`](09-union-find-from-scratch/) | Disjoint set (Union-Find) | Path compression, union by rank, component tracking |
+| 10 | [`10-segment-tree-from-scratch`](10-segment-tree-from-scratch/) | Segment tree | Range sum and point update |
+| 11 | [`11-fenwick-tree-from-scratch`](11-fenwick-tree-from-scratch/) | Fenwick tree (BIT) | Prefix sum, range sum, `add` and `set` |
+| 12 | [`01-sorting`](01-sorting/) | Basic sorting algorithms | Bubble, selection, insertion and counting sort; comparison and swap counting |
 
-Her proje klasöründeki README dosyası o örneğin senaryosunu daha ayrıntılı açıklar; bir kısmı beklenen çıktıyı da verir.
+The README file in each project folder explains the scenario of that example in more detail; some of them also give the expected output.
 
-Not: klasör adlarındaki numara önekleri tablodaki sırayla birebir örtüşmez. İlk üç klasörde önek yoktur, `01-sorting` ise tabloda son sıradadır.
+Note: the number prefixes in the folder names do not match the order in the table exactly. The first three folders have no prefix, and `01-sorting` is last in the table.
 
-## Gereksinimler
+## Requirements
 
-- JDK 8 veya daha yeni bir sürüm
-- Komut satırı/terminal
+- JDK 8 or newer
+- A command line/terminal
 
-Kurulumu doğrulamak için:
+To verify the installation:
 
 ```bash
 java -version
 javac -version
 ```
 
-## Kurulum ve çalıştırma
+## Setup and running
 
-Kurulum adımı yoktur; depoyu indirmek yeterlidir. Her klasör bağımsız bir Java projesidir ve kendi giriş sınıfına (`main` metodunu içeren sınıf) sahiptir. Bu nedenle projeleri ayrı ayrı derlemek gerekir.
+There is no installation step; downloading the repository is enough. Each folder is a standalone Java project and has its own entry class (the class that contains the `main` method). For this reason the projects have to be compiled one by one.
 
-Örneğin min heap uygulamasını çalıştırmak için depo kök dizininde şu komutları kullanın:
+For example, to run the min heap implementation, use these commands in the repository root:
 
 ```bash
 cd 06-heap-from-scratch
@@ -71,7 +75,7 @@ javac -encoding UTF-8 -d out src/*.java
 java -cp out MinHeapDemo
 ```
 
-Başka bir örneği çalıştırmak için klasör adını ve son komuttaki giriş sınıfını değiştirmeniz yeterlidir:
+To run another example, change the folder name and the entry class in the last command:
 
 ```bash
 cd 08-trie-from-scratch
@@ -79,7 +83,7 @@ javac -encoding UTF-8 -d out src/*.java
 java -cp out TrieDemo
 ```
 
-| Klasör | Giriş sınıfı | Klasör | Giriş sınıfı |
+| Folder | Entry class | Folder | Entry class |
 | --- | --- | --- | --- |
 | `stack-from-scratch` | `StackDemo` | `07-graph-from-scratch` | `GraphDemo` |
 | `queue-from-scratch` | `QueueDemo` | `08-trie-from-scratch` | `TrieDemo` |
@@ -88,74 +92,74 @@ java -cp out TrieDemo
 | `05-tree-basics` | `TreeDemo` | `11-fenwick-tree-from-scratch` | `FenwickTreeDemo` |
 | `06-heap-from-scratch` | `MinHeapDemo` | `01-sorting` | `Main` |
 
-Kaynak dosyalar UTF-8 kodludur ve Türkçe karakter içerir; `-encoding UTF-8` seçeneği bu yüzden verilir. Derlenen `.class` dosyaları ilgili projenin `out` klasörüne yazılır. Temizlemek istediğinizde bu klasörü silebilirsiniz. Alt README'lerdeki komutların bir kısmı `.class` dosyalarını `src` içine yazar; iki çıktı da `.gitignore` kapsamındadır.
+The source files are UTF-8 encoded and contain Turkish characters; that is why the `-encoding UTF-8` option is passed. The compiled `.class` files are written to the `out` folder of the project. You can delete this folder when you want to clean up. Some of the commands in the sub-folder READMEs write the `.class` files into `src`; both outputs are covered by `.gitignore`.
 
-## Kullanılan yaklaşım
+## Approach
 
-Veri yapıları Java'nın hazır `Stack`, `Queue`, `PriorityQueue`, `HashMap`, `HashSet`, `TreeMap` veya benzeri koleksiyon sınıflarına dayanmadan uygulanmıştır. Bunun yerine:
+The data structures are implemented without relying on Java's built-in `Stack`, `Queue`, `PriorityQueue`, `HashMap`, `HashSet`, `TreeMap` or similar collection classes. Instead, they use:
 
-- diziler,
-- özel node/entry sınıfları,
-- döngüler,
+- arrays,
+- custom node/entry classes,
+- loops,
 - recursion,
-- temel nesne yönelimli programlama yapıları
+- basic object-oriented programming constructs.
 
-kullanılmıştır. Projelerin Maven, Gradle veya üçüncü taraf kütüphane bağımlılığı yoktur.
+The projects have no Maven, Gradle or third-party library dependencies.
 
-## Karmaşıklık özeti
+## Complexity summary
 
-| Veri yapısı | Temel işlem | Zaman karmaşıklığı |
+| Data structure | Basic operation | Time complexity |
 | --- | --- | --- |
 | Stack | `push`, `pop`, `peek` | `O(1)` |
 | Circular queue | `enqueue`, `dequeue`, `peek` | `O(1)` |
-| Hash map | `put`, `get`, `remove` | Ortalama `O(1)`, en kötü `O(n)` |
-| Binary tree | Bir dolaşma işlemi | `O(n)` |
+| Hash map | `put`, `get`, `remove` | Average `O(1)`, worst case `O(n)` |
+| Binary tree | One traversal | `O(n)` |
 | Min heap | `insert`, `extractMin` | `O(log n)` |
 | Graph (adjacency matrix) | DFS, BFS | `O(V²)` |
-| Trie | Ekleme, arama, silme | `O(L)` |
-| Union-Find | `find`, `union` | Amortize `O(α(n))` |
+| Trie | Insertion, search, deletion | `O(L)` |
+| Union-Find | `find`, `union` | Amortized `O(α(n))` |
 | Segment tree | Range query, point update | `O(log n)` |
 | Fenwick tree | Prefix/range query, update | `O(log n)` |
-| Bubble, selection, insertion sort | Sıralama | En kötü `O(n²)` |
-| Counting sort | Sıralama | `O(n + k)` |
+| Bubble, selection, insertion sort | Sorting | Worst case `O(n²)` |
+| Counting sort | Sorting | `O(n + k)` |
 
-Burada `n` eleman sayısını, `V` vertex sayısını, `L` kelime uzunluğunu, `k` dizideki en büyük değeri ve `α` ters Ackermann fonksiyonunu ifade eder.
+Here `n` is the number of elements, `V` the number of vertices, `L` the word length, `k` the largest value in the array and `α` the inverse Ackermann function.
 
-## Önerilen öğrenme sırası
+## Suggested learning order
 
-Konular birbirinin üzerine kurulacak şekilde numaralandırılmıştır. İlk kez çalışıyorsanız şu sırayı izleyebilirsiniz:
+The topics are numbered so that they build on each other. If you are studying them for the first time, you can follow this order:
 
-1. Stack, queue ve hash map ile temel dizi/node kullanımını inceleyin.
-2. Recursion örnekleriyle recursive çağrı ve base case kavramlarını öğrenin.
-3. Binary tree üzerinde recursive traversal yöntemlerini uygulayın.
-4. Heap, graph ve trie ile daha gelişmiş veri temsillerine geçin.
-5. Union-Find, segment tree ve Fenwick tree ile verimli sorgu/güncelleme tekniklerini karşılaştırın.
+1. Study basic array/node usage with the stack, queue and hash map.
+2. Learn the concepts of recursive call and base case with the recursion examples.
+3. Apply the recursive traversal methods on a binary tree.
+4. Move on to more advanced data representations with the heap, graph and trie.
+5. Compare efficient query/update techniques with Union-Find, the segment tree and the Fenwick tree.
 
-Sıralama algoritmaları (`01-sorting`) yalnızca dizi kullanır; bu sıranın herhangi bir yerinde çalışılabilir.
+The sorting algorithms (`01-sorting`) use only arrays; they can be studied at any point in this order.
 
-## Klasör yapısı
+## Folder structure
 
 ```
-<proje-klasörü>/     12 proje; adları yukarıdaki tabloda
-  README.md          projenin senaryosu ve çalıştırma komutları
-  src/               veri yapısı sınıfları ve giriş sınıfı (.java, paket bildirimi yok)
+<project-folder>/    12 projects; their names are in the table above
+  README.md          the scenario of the project and the commands to run it
+  src/               data structure classes and the entry class (.java, no package declaration)
 README.md
 LICENSE
 .gitignore
 ```
 
-## Testler
+## Tests
 
-Depoda ayrı bir otomatik test altyapısı bulunmuyor. Her projenin giriş sınıfı (`*Demo.java`, `01-sorting` içinde `Main.java`), temel işlemleri örnek verilerle çalıştıran bir demo görevi görüyor. Değişiklik yaptıktan sonra ilgili projeyi yeniden derleyip konsol çıktısını, varsa proje README'sindeki beklenen sonuçlarla karşılaştırabilirsiniz.
+The repository has no separate automated test setup. The entry class of each project (`*Demo.java`, or `Main.java` in `01-sorting`) acts as a demo that runs the basic operations with sample data. After making a change, you can recompile the project and compare the console output with the expected results in the project README, if it has any.
 
-## Bilinen eksikler
+## Known limitations
 
-- Otomatik test yok; doğrulama demo çıktısı gözle karşılaştırılarak yapılır.
-- Stack ve queue sabit kapasitelidir; dolduğunda yeni elemanı kabul etmez. Hash map tablo boyutunu büyütmez.
-- Yapılar generic değildir; örneğin hash map `int` anahtar ve `String` değer tutar.
-- Trie yalnızca `a-z` küçük harflerini, counting sort yalnızca `0` ve pozitif tam sayıları destekler.
-- Alt README'lerin beşi İngilizce, yedisi Türkçedir.
+- There are no automated tests; verification is done by comparing the demo output by eye.
+- The stack and the queue have a fixed capacity; when they are full, they do not accept a new element. The hash map does not grow its table.
+- The structures are not generic; for example, the hash map holds `int` keys and `String` values.
+- The trie supports only the lowercase letters `a-z`, and counting sort supports only `0` and positive integers.
+- Five of the sub-folder READMEs are in English and seven are in Turkish.
 
-## Lisans
+## License
 
-Kod [MIT lisansı](LICENSE) ile sunulur.
+The code is released under the [MIT license](LICENSE).
