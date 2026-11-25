@@ -1,0 +1,9 @@
+# Derleme çıktıları
+*.class
+out/
+build/
+
+# IDE dosyaları
+.idea/
+*.iml
+.vscode/
